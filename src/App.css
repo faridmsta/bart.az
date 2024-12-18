@@ -1,0 +1,9 @@
+.longTextDeny{
+    
+        display: -webkit-box;          /* Enables the use of the following properties */
+        -webkit-line-clamp: 1;         /* Limits text to 2 lines */
+        -webkit-box-orient: vertical;  /* Specifies the box's orientation */
+        overflow: hidden;              /* Hides the overflowing text */
+        text-overflow: ellipsis;       /* Adds the ellipsis */
+      
+}

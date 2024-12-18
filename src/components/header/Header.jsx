@@ -7,7 +7,7 @@ function Header() {
         <header className='w-full' >
             <div className="header">
                 <div className="top bg-[#F1F3FA] p-4">
-                    <div className="container w-[90%] max-w-[1440px] m-auto flex justify-between align-middle">
+                    <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
                         <div className="left">
                             <nav>
                                 <ul className='flex gap-6 text-[15px]' >
@@ -32,7 +32,7 @@ function Header() {
                     </div>
                 </div>
                 <div className="bottom bg-white p-4 flex  items-center">
-                    <div className="container w-[90%] max-w-[1440px] m-auto flex justify-between items-center gap-2 ">
+                    <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between items-center gap-2 ">
                         <div className="logo">
                             <img src={Logo} alt="" />
                         </div>
