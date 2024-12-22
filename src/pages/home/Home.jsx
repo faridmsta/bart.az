@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import neqliyyat from './components/bendoimg/image 1.png'
@@ -20,8 +20,24 @@ import frame from './../../components/img/icons/frame.svg'
 import clock from './../../components/img/icons/clock.svg'
 import barter from './../../components/img/icons/barter.svg'
 import credit from './../../components/img/icons/kredit.svg'
+import lupa from './../../components/img/icons/lupa.svg'
+import store from './../../components/img/icons/store.svg'
+import fi_check from './../../components/img/icons/fi_check.svg'
+
+import camera from './../../components/img/icons/camera.svg'
+import monitor from './../../components/img/icons/monitor.svg'
+import pring from './../../components/img/icons/pring.svg'
+import sofa from './../../components/img/icons/sofa.svg'
+import storeWhite from './../../components/img/icons/storeWhite.svg'
+import vacuumcleaner from './../../components/img/icons/vacuumcleaner.svg'
+
+import monitormarket from './components/monitorMarket.png'
 
 import iphone from './../../components/img/products/image1.jpg'
+import StoriesWrap from '../../components/storiesWrap/StoriesWrap'
+
+
+
 
 const bendoGridup = [
   {
@@ -92,6 +108,54 @@ const bendoGridDown = [
     customStyle: 'w-[14%]'
   },
 ]
+
+const popularSearches = [
+  'yüngül lehimli disklər',
+  'ABS',
+  'lyuk',
+  'yağış sensoru',
+  'mərkəzi qapanma',
+  'planşetlər',
+  'maqnitola',
+  'ps3 oyunları',
+  'apple notebook',
+  'telefon',
+  'lg notebook',
+  'fotoaparatların satışı',
+  'proqramlar',
+  'daşınmaz əmlak',
+  'torpaq satılır',
+  'playstation 3 satılır',
+  'chevrolet',
+  'lorem ipsum',
+  'yüngül lehimli disklər',  // Təkrar daxil edilmişlər
+  'ABS',
+  'lyuk',
+  'yağış sensoru',
+  'mərkəzi qapanma',
+  'planşetlər',
+  'maqnitola',
+  'ps3 oyunları',
+  'apple notebook',
+  'telefon',
+  'lg notebook',
+  'fotoaparatların satışı',
+  'proqramlar',
+  'daşınmaz əmlak',
+  'torpaq satılır',
+  'playstation 3 satılır',
+  'chevrolet',
+  'lorem ipsum',
+  'yüngül lehimli disklər',
+  'ABS',
+  'lyuk',
+  'yağış sensoru',
+  'mərkəzi qapanma',
+  'planşetlər',
+  'maqnitola'
+];
+
+
 
 const products = [
   {
@@ -208,16 +272,22 @@ const products = [
   },
 ]
 
+
 function Home() {
+
+
+
+
   return (
+
     <main>
-      <section className="bendoGrid w-full">
-        <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
-          <div className="innerBendo w-full  " >
+      {/* <section className="bendoGrid w-full">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
+          <div className="innerBendo lg:w-full  " >
             <div className="upper flex w-full gap-3 mb-3">
               {
-                bendoGridup.map((item) => (
-                  <div className={`gridElement h-[112px]  p-3  relative  bg-[#F1F3FA] rounded-xl ${item.customStyle}`}>
+                bendoGridup.map((item, index) => (
+                  <div key={index} className={`gridElement h-[112px]  p-3  relative  bg-[#F1F3FA] rounded-xl ${item.customStyle}`}>
                     <p className='text-[15px] font-semibold w-[60%]' >{item.title}</p>
                     <div className="image absolute bottom-0 right-0   flex items-end justify-end">
                       <img
@@ -230,8 +300,8 @@ function Home() {
             </div>
             <div className="upper flex w-full gap-3">
               {
-                bendoGridDown.map((item) => (
-                  <div className={`gridElement h-[112px]  p-3  relative  bg-[#F1F3FA] rounded-xl ${item.customStyle}`}>
+                bendoGridDown.map((item, index) => (
+                  <div key={index} className={`gridElement h-[112px]  p-3  relative  bg-[#F1F3FA] rounded-xl ${item.customStyle}`}>
                     <p className='text-[15px] font-semibold w-[60%]' >{item.title}</p>
                     <div className="image absolute bottom-0 right-0   flex items-end justify-end">
                       <img
@@ -244,32 +314,35 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="specialAnnounce">
-        <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
-
+      </section> */}
+      <section className="specialAnnounce w-full my-12">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1200px]  m-auto flex justify-between align-middle">
+          <div className="specialAnnounceInner w-full ">
+            <h2 className='font-bold text-[32px] mb-2' >Xüsusi elanlar </h2>
+            <StoriesWrap />
+          </div>
         </div>
       </section>
       <section className="specialOffers my-12 bg-[#F8FAFC] py-12">
-        <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
           <div className="specialOffersInnder w-full">
-            <div className="header w-full flex justify-between items-end mb-4">
-              <div className="left flex text-[32px] font-bold items-center gap-2">
+            <div className="header w-full flex justify-between  items-end mb-4">
+              <div className="left flex  items-center gap-2">
                 <img src={fire} alt="" className='aspect-square h-10' />
-                <h2>Dəyərindən aşağı satılanlar</h2>
+                <h2 className='text-[20px] sm:text-[32px] font-bold' >Dəyərindən aşağı satılanlar</h2>
               </div>
-              <div className="right">
-                <Link className='text-[#2970FF] font-semibold text-[18px] underline' >Hamısına bax</Link>
+              <div className="right hidden sm:inline">
+                <Link className='text-[#2970FF] font-semibold text-[18px] underline ' >Hamısına bax</Link>
               </div>
             </div>
-            <div className="cards w-full flex items-center justify-between gap-3 flex-wrap">
+            <div className="cards w-full flex items-center justify-between gap-1 lg:gap-2 flex-wrap">
               {
                 products.map((item, index) => (
-                  <div className={`card 
+                  <div key={item.id} className={`card 
                   ${(index == 0) ? "border-[#F79009]" : (index == 1) ? "border-[#17B26A]" : (index == 2) ? "border-[#F04438]" : (index == 3) ? "border-[#2970FF]" : "border-[#E3E8EF]"
                     }
                   
-                  border-[2px] w-[24%] h-[340px] bg rounded-[20px] overflow-hidden `}>
+                  border-[2px] w-[49%] sm:w-[30%]  lg:w-[24%] h-[340px] bg rounded-[20px] overflow-hidden `}>
                     <div className="top w-full">
                       <div className="image w-full p-[2px] rounded-[16px] overflow-hidden">
                         <img
@@ -298,30 +371,33 @@ function Home() {
                   </div>
                 ))
               }
+            </div>
+            <div className="w-full flex items-center justify-center pt-5  sm:hidden ">
+              <Link className='text-[#2970FF] font-semibold text-[18px] underline ' >Hamısına bax</Link>
             </div>
           </div>
         </div>
       </section>
       <section className="specialOffers my-12 py-12">
-        <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
           <div className="specialOffersInnder w-full">
             <div className="header w-full flex justify-between items-end mb-4">
-              <div className="left flex text-[32px] font-bold items-center gap-2">
+              <div className="left flex  items-center gap-2">
                 <img src={frame} alt="" className='aspect-square h-10' />
-                <h2>Premium elanlar</h2>
+                <h2 className='text-[20px] sm:text-[32px] font-bold' >Premium elanlar</h2>
               </div>
-              <div className="right">
-                <Link className='text-[#2970FF] font-semibold text-[18px] underline' >Hamısına bax</Link>
+              <div className="right hidden sm:inline">
+                <Link className='text-[#2970FF] font-semibold text-[18px] underline ' >Hamısına bax</Link>
               </div>
             </div>
-            <div className="cards w-full flex items-center justify-between gap-3 flex-wrap">
+            <div className="cards w-full flex items-center justify-between gap-1 lg:gap-2 flex-wrap">
               {
                 products.map((item, index) => (
-                  <div className={`card 
+                  <div key={item.id} className={`card 
                   border-[#E3E8EF]
                   
                   
-                  border-[2px] w-[24%] h-[340px] bg rounded-[20px] overflow-hidden `}>
+                  border-[2px] w-[49%] sm:w-[30%]  lg:w-[24%] h-[340px] bg rounded-[20px] overflow-hidden `}>
                     <div className="top w-full">
                       <div className="image w-full p-[2px] rounded-[16px] overflow-hidden">
                         <img
@@ -344,27 +420,30 @@ function Home() {
                 ))
               }
             </div>
+            <div className="w-full flex items-center justify-center pt-5  sm:hidden ">
+              <Link className='text-[#2970FF] font-semibold text-[18px] underline ' >Hamısına bax</Link>
+            </div>
           </div>
         </div>
       </section>
       <section className="specialOffers my-12  py-12">
-        <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
           <div className="specialOffersInnder w-full">
             <div className="header w-full flex justify-between items-end mb-4">
               <div className="left flex text-[32px] font-bold items-center gap-2">
                 <img src={clock} alt="" className='aspect-square h-10' />
-                <h2>Son elanlar</h2>
+                <h2 className='text-[20px] sm:text-[32px] font-bold' >Son elanlar</h2>
               </div>
-              <div className="right">
+              <div className="right hidden sm:inline">
                 <Link className='text-[#2970FF] font-semibold text-[18px] underline' >Hamısına bax</Link>
               </div>
             </div>
-            <div className="cards w-full flex items-center justify-between gap-3 flex-wrap">
+            <div className="cards w-full flex items-center justify-between gap-1 lg:gap-2 flex-wrap">
               {
                 products.map((item, index) => (
-                  <div className={`card border-[#E3E8EF]
+                  <div key={item.id} className={`card border-[#E3E8EF]
                  
-                  border-[2px] w-[24%] h-[340px] bg rounded-[20px] overflow-hidden `}>
+                  border-[2px] w-[49%] sm:w-[30%]  lg:w-[24%] h-[340px] bg rounded-[20px] overflow-hidden `}>
                     <div className="top w-full">
                       <div className="image w-full p-[2px] rounded-[16px] overflow-hidden">
                         <img
@@ -394,9 +473,171 @@ function Home() {
                 ))
               }
             </div>
+            <div className="w-full flex items-center justify-center pt-5  sm:hidden ">
+              <Link className='text-[#2970FF] font-semibold text-[18px] underline ' >Hamısına bax</Link>
+            </div>
           </div>
         </div>
       </section>
+
+
+      <section className="openStore my-12  py-12 hidden  md:block">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
+          <div className="openStoreInner w-full bg-[url('/maqazaAc.png')] bg-cover bg-center h-[426px] rounded-3xl py-10 px-16 relative">
+            <div className="icon rotate-[15deg] top-[20%] right-[5%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={camera} alt="icon"
+                className='-rotate-[15deg] '
+              />
+            </div>
+            <div className="icon -rotate-[42deg] top-[80%] right-[35%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={monitor} alt="icon"
+                className='rotate-[42deg] '
+              />
+            </div>
+            <div className="icon -rotate-[40deg] top-[65%] right-[3%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={pring} alt="icon"
+                className='rotate-[50deg] '
+              />
+            </div>
+            <div className="icon -rotate-[22deg] top-[50%] right-[45%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={sofa} alt="icon"
+                className='rotate-[20deg] '
+              />
+            </div>
+            <div className="icon rotate-[15deg] top-[25%] right-[58%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={storeWhite} alt="icon"
+                className='-rotate-[15deg] '
+              />
+            </div>
+            <div className="icon -rotate-[3deg] top-[25%] right-[42%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-3 overflow-hidden">
+              <img src={vacuumcleaner} alt="icon"
+                className='rotate-[0deg] '
+              />
+            </div>
+
+            <div className="context flex flex-col justify-between items-start h-full ">
+              <div className="bg-white py-3 px-6 font-bold text-[32px] rounded-2xl">
+                Mağaza aç
+              </div>
+              <div className="p-4 bg-[linear-gradient(209deg,rgba(21,94,239,0)_0%,rgba(21,94,239,0.5)_32%)] text-white rounded-2xl w-[45%] flex flex-col  gap-2">
+                <h3 className='text-lg font-semibold text-left' >Mağaza açmanın üstünlükləri</h3>
+                <div className="w-full flex text-sm font-medium text-left justify-between text-[#FFFFFFbb] text-[14px]">
+                  <p>Elanların əsas səhifə və axtarışlarda daha önə çıxsın</p><img src={fi_check} alt="Check" />
+                </div>
+                <div className="w-full flex text-sm font-medium text-left justify-between text-[#FFFFFFbb] text-[14px]">
+                  <p>Daha çox sayda elan yerləşdir</p><img src={fi_check} alt="Check" />
+                </div>
+                <div className="w-full flex text-sm font-medium text-left justify-between text-[#FFFFFFbb] text-[14px]">
+                  <p>Profilinə banner, logo, sosial və veb sayt linkləri əlavə etmə</p><img src={fi_check} alt="Check" />
+                </div>
+                <div className="w-full flex text-sm font-medium text-left justify-between text-[#FFFFFFbb] text-[14px]">
+                  <p>Daha çox alıcıya göstərilmə</p><img src={fi_check} alt="Check" />
+                </div>
+              </div>
+              <div className="bg-[#1570EF] flex items-center justify-center text-white py-3 px-6 font-semibold text-[16px] rounded-xl">
+                <img className='inline mr-2' src={store} alt='' />
+                Mağaza aç
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="openStore my-12  py-12 block  md:hidden">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
+          <div className="openStoreInner w-full bg-[url('/maqazaAcMobile.png')] bg-cover bg-no-repeat bg-center  rounded-3xl py-10 px-5 relative">
+            <div className="icon rotate-[15deg] top-[20%] right-[80%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={camera} alt="icon"
+                className='-rotate-[15deg] '
+              />
+            </div>
+            <div className="icon -rotate-[42deg] top-[90%] right-[0%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={monitor} alt="icon"
+                className='rotate-[42deg] '
+              />
+            </div>
+            <div className="icon -rotate-[40deg] top-[80%] left-[-5%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={pring} alt="icon"
+                className='rotate-[50deg] '
+              />
+            </div>
+            <div className="icon -rotate-[22deg] top-[45%] right-[80%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={sofa} alt="icon"
+                className='rotate-[20deg] '
+              />
+            </div>
+            <div className="icon rotate-[15deg] top-[45%] right-[20%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
+              <img src={storeWhite} alt="icon"
+                className='-rotate-[15deg] '
+              />
+            </div>
+            <div className="icon -rotate-[3deg] top-[12%] right-[2%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-3 overflow-hidden">
+              <img src={vacuumcleaner} alt="icon"
+                className='rotate-[0deg] '
+              />
+            </div>
+            <div className="context flex flex-col justify-between items-start h-full ">
+              <div className="bg-white py-3 px-6 font-bold text-[32px] text-center w-full rounded-2xl">
+                Mağaza aç
+              </div>
+
+              <div className="middle w-full py-5">
+                <img
+                  className='w-full'
+                  src={monitormarket} alt="" />
+              </div>
+              <div className="down w-full">
+                <div className="p-4 bg-[linear-gradient(209deg,rgba(21,94,239,0)_0%,rgba(21,94,239,0.5)_32%)] text-white rounded-2xl w-full flex flex-col  gap-2  mb-5">
+                  <h3 className='text-lg font-semibold text-left' >Mağaza açmanın üstünlükləri</h3>
+                  <div className="w-full flex text-sm font-medium text-left justify-between text-[#FFFFFFbb] text-[14px] gap-2">
+                    <p>Elanların əsas səhifə və axtarışlarda daha önə çıxsın</p><img src={fi_check} alt="Check" />
+                  </div>
+                  <div className="w-full flex text-sm font-medium text-left justify-between text-[#FFFFFFbb] text-[14px] gap-2">
+                    <p>Daha çox sayda elan yerləşdir</p><img src={fi_check} alt="Check" />
+                  </div>
+                  <div className="w-full flex text-sm font-medium text-left justify-between text-[#FFFFFFbb] text-[14px] gap-2">
+                    <p>Profilinə banner, logo, sosial və veb sayt linkləri əlavə etmə</p><img src={fi_check} alt="Check" />
+                  </div>
+                  <div className="w-full flex text-sm font-medium text-left justify-between text-[#FFFFFFbb] text-[14px] gap-2">
+                    <p>Daha çox alıcıya göstərilmə</p><img src={fi_check} alt="Check" />
+                  </div>
+                </div>
+                <div className="bg-[#1570EF] flex items-center justify-center text-white py-3 px-6 font-semibold text-[16px] rounded-xl">
+                  <img className='inline mr-2' src={store} alt='' />
+                  Mağaza aç
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="popularSearch my-12 py-12">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto">
+          <div className="popularSearch w-full">
+            <div className="header w-full flex justify-between items-end mb-4">
+              <div className="left flex text-[32px] font-bold items-center gap-2">
+                <img src={lupa} alt="" className="aspect-square h-10" />
+                <h2>Populyar axtarışlar</h2>
+              </div>
+            </div>
+            <div className="searches flex md:flex-wrap gap-3 overflow-x-auto  w-full">
+              {popularSearches.map((item, index) => (
+                <div
+                  key={index}
+                  className="py-2 px-4 bg-[#F1F3FA] rounded-[6px] text-[15px] whitespace-nowrap"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
 
     </main>
   )

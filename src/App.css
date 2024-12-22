@@ -1,9 +1,31 @@
-.longTextDeny{
-    
-        display: -webkit-box;          /* Enables the use of the following properties */
-        -webkit-line-clamp: 1;         /* Limits text to 2 lines */
-        -webkit-box-orient: vertical;  /* Specifies the box's orientation */
-        overflow: hidden;              /* Hides the overflowing text */
-        text-overflow: ellipsis;       /* Adds the ellipsis */
-      
+.longTextDeny {
+
+  display: -webkit-box;
+  /* Enables the use of the following properties */
+  -webkit-line-clamp: 1;
+  /* Limits text to 2 lines */
+  -webkit-box-orient: vertical;
+  /* Specifies the box's orientation */
+  overflow: hidden;
+  /* Hides the overflowing text */
+  text-overflow: ellipsis;
+  /* Adds the ellipsis */
+
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #CDD5DF;
+
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: var(--light);
+  /* Arxa fon rəngi */
 }
