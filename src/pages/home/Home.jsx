@@ -282,14 +282,14 @@ function Home() {
 
     <main className=' pb-14  '>
       <section className="bendoGrid w-full my-6">
-        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle overflow-x-auto lg:overflow-hidden ">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle overflow-x-auto custom-scrollbar  lg:overflow-hidden ">
           <div className="innerBendo flex lg:block lg:w-full gap-3">
             <div className="upper flex min-w-[100%] gap-3 mb-3 flex-nowrap">
               {bendoGridup.map((item, index) => (
                 <div key={index} className={`gridElement lg:flex-shrink h-[112px] p-3 relative bg-[#F1F3FA] rounded-xl overflow-hidden ${item.customStyle}`}>
                   <p className="text-[15px] font-semibold w-[60%]">{item.title}</p>
                   <div className="image absolute bottom-0 right-0 flex items-end justify-end">
-                    <img className="object-cover" src={item.image} alt="" />
+                    <img className="object-cover" src={item.image} alt={item.title} />
                   </div>
                 </div>
               ))}
@@ -299,7 +299,7 @@ function Home() {
                 <div key={index} className={`gridElement  lg:flex-shrink h-[112px] p-3 relative bg-[#F1F3FA] rounded-xl overflow-hidden ${item.customStyle}`}>
                   <p className="text-[15px] font-semibold w-[60%]">{item.title}</p>
                   <div className="image absolute bottom-0 right-0 flex items-end justify-end">
-                    <img className="object-cover" src={item.image} alt="" />
+                    <img className="object-cover" src={item.image} alt={item.title} />
                   </div>
                 </div>
               ))}
@@ -321,7 +321,7 @@ function Home() {
           <div className="specialOffersInnder w-full">
             <div className="header w-full flex justify-between  items-end mb-4">
               <div className="left flex  items-center gap-2">
-                <img src={fire} alt="" className='aspect-square h-10' />
+                <img src={fire} alt="fire emoji" className='aspect-square h-10' />
                 <h2 className='text-[20px] sm:text-[32px] font-bold' >Dəyərindən aşağı satılanlar</h2>
               </div>
               <div className="right hidden sm:inline">
@@ -340,7 +340,7 @@ function Home() {
                       <div className="image w-full p-[2px] rounded-[16px] overflow-hidden">
                         <img
                           className='w-full rounded-[16px]'
-                          src={item.img} alt="" />
+                          src={item.img} alt={item.description} />
                       </div>
 
                     </div>
@@ -351,10 +351,10 @@ function Home() {
                         </span>
                         <span className='flex gap-1' >
                           {item.isBarter && <div className=''>
-                            <img src={barter} alt="" />
+                            <img src={barter} alt="barter" />
                           </div>}
                           {item.isCredit && <div className=''>
-                            <img src={credit} alt="" />
+                            <img src={credit} alt="credit" />
                           </div>}
                         </span>
                       </div>
@@ -376,7 +376,7 @@ function Home() {
           <div className="specialOffersInnder w-full">
             <div className="header w-full flex justify-between items-end mb-4">
               <div className="left flex  items-center gap-2">
-                <img src={frame} alt="" className='aspect-square h-10' />
+                <img src={frame} alt="frame emoji" className='aspect-square h-10' />
                 <h2 className='text-[20px] sm:text-[32px] font-bold' >Premium elanlar</h2>
               </div>
               <div className="right hidden sm:inline">
@@ -395,7 +395,7 @@ function Home() {
                       <div className="image w-full p-[2px] rounded-[16px] overflow-hidden">
                         <img
                           className='w-full rounded-[16px]'
-                          src={item.img} alt="" />
+                          src={item.img} alt={item.description} />
                       </div>
 
                     </div>
@@ -424,7 +424,7 @@ function Home() {
           <div className="specialOffersInnder w-full">
             <div className="header w-full flex justify-between items-end mb-4">
               <div className="left flex text-[32px] font-bold items-center gap-2">
-                <img src={clock} alt="" className='aspect-square h-10' />
+                <img src={clock} alt="clock emoji" className='aspect-square h-10' />
                 <h2 className='text-[20px] sm:text-[32px] font-bold' >Son elanlar</h2>
               </div>
               <div className="right hidden sm:inline">
@@ -441,7 +441,7 @@ function Home() {
                       <div className="image w-full p-[2px] rounded-[16px] overflow-hidden">
                         <img
                           className='w-full rounded-[16px]'
-                          src={item.img} alt="" />
+                          src={item.img} alt={item.description} />
                       </div>
 
                     </div>
@@ -452,10 +452,10 @@ function Home() {
                         </span>
                         <span className='flex gap-1' >
                           {item.isBarter && <div className=''>
-                            <img src={barter} alt="" />
+                            <img src={barter} alt="barter emoji" />
                           </div>}
                           {item.isCredit && <div className=''>
-                            <img src={credit} alt="" />
+                            <img src={credit} alt="credit emoji" />
                           </div>}
                         </span>
                       </div>
@@ -474,7 +474,7 @@ function Home() {
       </section>
 
 
-      <section className="openStore my-12  py-12 hidden  md:block">
+      <section className="openStore my-12  py-12 hidden md:block">
         <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
           <div className="openStoreInner w-full bg-[url('/maqazaAc.png')] bg-cover bg-center h-[426px] rounded-3xl py-10 px-16 relative">
             <div className="icon rotate-[15deg] top-[20%] right-[5%] bg-white/16 rounded-xl shadow-md backdrop-blur-lg absolute  p-2 overflow-hidden">
@@ -528,7 +528,7 @@ function Home() {
                 </div>
               </div>
               <div className="bg-[#1570EF] flex items-center justify-center text-white py-3 px-6 font-semibold text-[16px] rounded-xl">
-                <img className='inline mr-2' src={store} alt='' />
+                <img className='inline mr-2' src={store} alt='Store icon' />
                 Mağaza aç
               </div>
 
@@ -578,7 +578,7 @@ function Home() {
               <div className="middle w-full py-5">
                 <img
                   className='w-full'
-                  src={monitormarket} alt="" />
+                  src={monitormarket} alt="icon" />
               </div>
               <div className="down w-full">
                 <div className="p-4 bg-[linear-gradient(209deg,rgba(21,94,239,0)_0%,rgba(21,94,239,0.5)_32%)] text-white rounded-2xl w-full flex flex-col  gap-2  mb-5">
@@ -597,7 +597,7 @@ function Home() {
                   </div>
                 </div>
                 <div className="bg-[#1570EF] flex items-center justify-center text-white py-3 px-6 font-semibold text-[16px] rounded-xl">
-                  <img className='inline mr-2' src={store} alt='' />
+                  <img className='inline mr-2' src={store} alt='Store icon' />
                   Mağaza aç
                 </div>
               </div>
@@ -613,11 +613,11 @@ function Home() {
           <div className="popularSearch w-full">
             <div className="header w-full flex justify-between items-end mb-4">
               <div className="left flex text-[32px] font-bold items-center gap-2">
-                <img src={lupa} alt="" className="aspect-square h-10" />
+                <img src={lupa} alt="Lupa emoji" className="aspect-square h-10" />
                 <h2>Populyar axtarışlar</h2>
               </div>
             </div>
-            <div className="searches flex md:flex-wrap gap-3 overflow-x-auto  w-full">
+            <div className="searches flex md:flex-wrap gap-3 overflow-x-auto custom-scrollbar pb-2  w-full">
               {popularSearches.map((item, index) => (
                 <div
                   key={index}

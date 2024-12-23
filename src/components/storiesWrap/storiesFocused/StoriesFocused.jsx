@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './StoriesFocused.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -12,6 +12,35 @@ import { Link } from 'react-router-dom';
 
 
 function StoriesFocused({ stories, startingStory, setIsFocusStory }) {
+
+    
+    const [slidesPerView, setSlidesPerView] = useState(getSlidesPerView());
+
+    // Function to calculate slides per view based on window width
+    function getSlidesPerView() {
+        if (window.innerWidth > 1100) return 2;
+        if (window.innerWidth > 1070) return 1.8;
+        if (window.innerWidth > 1000) return 1.6;
+        if (window.innerWidth > 950) return 1.5;
+        if (window.innerWidth > 767) return 1.4;
+        if (window.innerWidth > 579) return 1.3;
+        if (window.innerWidth > 424) return 1;
+        return 1;
+    }
+
+    useEffect(() => {
+        // Update slidesPerView state when window resizes
+        const handleResize = () => {
+            setSlidesPerView(getSlidesPerView());
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div className="storyfull fixed top-0 left-0 w-[100dvw] h-[100vh] bg-[rgb(0,0,0,0.9)] z-[2]">
@@ -30,7 +59,7 @@ function StoriesFocused({ stories, startingStory, setIsFocusStory }) {
                     </button>
                 </div>
                 <Swiper
-                    slidesPerView={(window.innerWidth>1100)? 2 :(window.innerWidth>1070)? 1.8 : (window.innerWidth>1000)? 1.6 : (window.innerWidth>950)? 1.5 : (window.innerWidth>767)? 1.4  : (window.innerWidth>579)? 1.3 : (window.innerWidth>424)? 1:  1 }
+                    slidesPerView={slidesPerView}
                     centeredSlides={true}
                     spaceBetween={200}
                     pagination={{ type: 'fraction' }}

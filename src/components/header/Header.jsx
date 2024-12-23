@@ -4,27 +4,28 @@ import Logo from './../img/logo.png'
 
 import category from './../img/icons/category.svg'
 import plus from './../img/icons/plus.svg'
+import { FaChevronRight } from "react-icons/fa";
 
-import neqliyyat from './../../pages/home/components/bendoimg/image 1.png'
-import demlak from './../../pages/home/components/bendoimg/image 2.png'
-import eloktronika from './../../pages/home/components/bendoimg/image 3.png'
-import xidvebiz from './../../pages/home/components/bendoimg/image 4.png'
-import aksesuarlar from './../../pages/home/components/bendoimg/image 5.png'
-import specialaccesories from './../../pages/home/components/bendoimg/image 6.png'
-import usaqalemi from './../../pages/home/components/bendoimg/image 7.png'
-import iselanlari from './../../pages/home/components/bendoimg/image 8.png'
-import heyvanlar from './../../pages/home/components/bendoimg/image 9.png'
-import maqazalar from './../../pages/home/components/bendoimg/image 10.png'
-import seyahetler from './../../pages/home/components/bendoimg/image 11.png'
-import gozelliksaqlamliq from './../../pages/home/components/bendoimg/image 12.png'
-import hobby from './../../pages/home/components/bendoimg/image 13.png'
+import neqliyyat from './components/img/image 1.png'
+import demlak from './components/img/image 1-1.png'
+import eloktronika from './components/img/image 1-2.png'
+import xidvebiz from './components/img/image 1-3.png'
+import aksesuarlar from './components/img/image 1-4.png'
+import specialaccesories from './components/img/image 1-5.png'
+import usaqalemi from './components/img/image 1-6.png'
+import iselanlari from './components/img/image 1-7.png'
+import heyvanlar from './components/img/image 1-8.png'
+import maqazalar from './components/img/image 1-9.png'
+import seyahetler from './components/img/image 1-10.png'
+import gozelliksaqlamliq from './components/img/image 1-11.png'
+import hobby from './components/img/image 1-12.png'
 
 
 const catalog1 = [
     {
         title: 'Neqliyyat',
         image: neqliyyat,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -100,7 +101,7 @@ const catalog1 = [
     {
         title: 'Daşınmaz əmlak',
         image: demlak,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -176,7 +177,7 @@ const catalog1 = [
     {
         title: 'Eloktronika',
         image: eloktronika,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -252,7 +253,7 @@ const catalog1 = [
     {
         title: 'Xidmətlər və biznes',
         image: xidvebiz,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -328,7 +329,7 @@ const catalog1 = [
     {
         title: 'Ehtiyat hissələri və aksesuarlar',
         image: aksesuarlar,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -404,7 +405,7 @@ const catalog1 = [
     {
         title: 'Şəxsi əşyalar',
         image: specialaccesories,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -480,7 +481,7 @@ const catalog1 = [
     {
         title: 'Uşaq aləmi',
         image: usaqalemi,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -556,7 +557,7 @@ const catalog1 = [
     {
         title: 'Is Elanlari',
         image: iselanlari,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -632,7 +633,7 @@ const catalog1 = [
     {
         title: 'Heyvanlar',
         image: heyvanlar,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -708,7 +709,7 @@ const catalog1 = [
     {
         title: 'Mağazalar',
         image: maqazalar,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -784,7 +785,7 @@ const catalog1 = [
     {
         title: 'Səyahət',
         image: seyahetler,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -860,7 +861,7 @@ const catalog1 = [
     {
         title: 'Gözəllik və sağlamlıq',
         image: gozelliksaqlamliq,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -936,7 +937,7 @@ const catalog1 = [
     {
         title: 'Hobbi və asüdə',
         image: hobby,
-        altMenu:  [
+        altMenu: [
             {
                 title: 'Audio və video',
                 elements: [
@@ -1019,8 +1020,8 @@ function Header() {
     const [isdrop1, setIsDrop1] = useState(false)
     const [isdrop2, setIsDrop2] = useState(false)
     const [isdrop3, setIsDrop3] = useState(false)
-    const [cat1index,setCat1index] = useState(0)
-    const [cat2index,setCat2index] = useState(0)
+    const [cat1index, setCat1index] = useState(0)
+    const [cat2index, setCat2index] = useState(0)
 
 
 
@@ -1066,7 +1067,7 @@ function Header() {
                                 onMouseEnter={() => { setIsDrop1(true) }}
                                 onMouseLeave={() => { setIsDrop1(false) }}
                             >
-                                <div className="button bg-[#2970FF] p-2 text-white rounded-[12px] h-full flex justify-center items-center  gap-2 ">
+                                <div className="button bg-[#2970FF] p-2 text-white rounded-[12px] h-full flex justify-center items-center  gap-2 text-[12px] xl:text-[16px] ">
                                     <img src={category} alt="" />
                                     <span>Kateqoriyalar</span>
                                 </div>
@@ -1079,23 +1080,27 @@ function Header() {
 
                                     className={`drop1
                                     ${isdrop1 ? '' : 'hidden'}
-                                    shadow-md absolute top-[100%] z-50 pt-2 `}>
-                                    <nav className='w-[320px] max-h-[744px]  custom-scrollbar  p-2 overflow-y-auto  bg-white rounded-[12px]' >
+                                     absolute top-[100%] z-50 pt-2 left-[-250px]   xl:left-[0%]`}>
+                                    <nav className='shadow-md w-[320px] max-h-[744px]  custom-scrollbar  p-2 overflow-y-auto  bg-white rounded-[12px]' >
                                         <ul>
                                             {
                                                 catalog1.map((category, index) => (
                                                     <li
-                                                    onMouseEnter={() => {
-                                                        setCat1index(index)
-                                                    }}
+                                                        key={index}
+                                                        onMouseEnter={() => {
+                                                            setCat1index(index)
+                                                        }}
                                                         className="p-2 hover:bg-[#F1F3FA] rounded-xl">
-                                                        <div className="left flex items-center gap-4">
-                                                            <div className="image w-[50px] h-[50px] ">
-                                                                <img
-                                                                    className='w-full h-full object-contain'
-                                                                    src={category.image} alt="image" />
+                                                        <div className="left flex items-center gap-4 justify-between">
+                                                            <div className="flex items-center gap-3">
+                                                                <div className="image w-[50px] h-[50px] ">
+                                                                    <img
+                                                                        className='w-full h-full object-contain'
+                                                                        src={category.image} alt="image" />
+                                                                </div>
+                                                                <p>{category.title}</p>
                                                             </div>
-                                                            <p>{category.title}</p>
+                                                            <FaChevronRight />
                                                         </div>
                                                     </li>
                                                 ))
@@ -1116,20 +1121,22 @@ function Header() {
 
                                     className={`drop2
                                     ${isdrop2 ? '' : 'hidden'}
-                                    shadow-md absolute top-[100%] z-50 pt-2 pl-6 left-[180%]`}>
-                                    <nav className='w-[320px] h-[744px]  custom-scrollbar  p-2  overflow-y-auto  bg-white rounded-[12px]' >
+                                     absolute top-[100%] z-50 pt-2 pl-6 left-[50px] xl:left-[310px]`}>
+                                    <nav className='shadow-md w-[320px] h-[744px]  custom-scrollbar  p-2  overflow-y-auto  bg-white rounded-[12px]' >
                                         <ul>
                                             {
-                                                catalog1[cat1index].altMenu?.map((category, indexxx) => (
-                                                    <li 
-                                                    onMouseEnter={() => {
-                                                        setCat2index(indexxx)
-                                                        
-                                                    }}
-                                                    className="p-2 h-[56px] flex items-center hover:bg-[#F1F3FA] rounded-xl">
-                                                        <div className="left flex items-center gap-4">
-                                                            
+                                                catalog1[cat1index].altMenu?.map((category, index2) => (
+                                                    <li
+                                                        key={index2}
+                                                        onMouseEnter={() => {
+                                                            setCat2index(index2)
+
+                                                        }}
+                                                        className="p-2 h-[56px] flex items-center hover:bg-[#F1F3FA] rounded-xl">
+                                                        <div className="left flex items-center gap-4 justify-between w-full">
+
                                                             <p>{category.title}</p>
+                                                            <FaChevronRight />
                                                         </div>
                                                     </li>
                                                 ))
@@ -1150,17 +1157,20 @@ function Header() {
 
                                     className={`drop3
                                     ${isdrop3 ? '' : 'hidden'}
-                                    shadow-md absolute top-[100%] z-50 pt-2 pl-6 left-[375%]`}>
-                                    <nav className='w-[320px] h-[744px]  custom-scrollbar  p-2  overflow-y-auto  bg-white rounded-[12px]' >
+                                     absolute top-[100%] z-50 pt-2 pl-6 left-[375px] xl:left-[640px]`}>
+                                    <nav className='shadow-md w-[320px] h-[744px]  custom-scrollbar  p-2  overflow-y-auto  bg-white rounded-[12px]' >
                                         <ul>
                                             {
-                                                
-                                                
+
+
                                                 catalog1[cat1index].altMenu[cat2index].elements?.map((item, index) => (
-                                                    <li className="p-2  h-[56px] flex items-center hover:bg-[#F1F3FA] rounded-xl">
-                                                        <div className="left flex items-center gap-4">
-                                                            
+                                                    <li
+                                                        key={index}
+                                                        className="p-2  h-[56px] flex items-center hover:bg-[#F1F3FA] rounded-xl">
+                                                        <div className="left flex items-center gap-4 justify-between w-full">
+
                                                             <p>{item}</p>
+                                                            <FaChevronRight />
                                                         </div>
                                                     </li>
                                                 ))
@@ -1169,7 +1179,7 @@ function Header() {
                                     </nav>
                                 </div>
                             </div>
-                            <div className="search bg-[#2970FF] w-full lg:w-[68%] p-1  rounded-[12px]">
+                            <div className="search bg-[#2970FF] w-full lg:w-[68%] p-1  rounded-[12px] text-[16px] lg:text-[12px] xl:text-[16px] ">
                                 <input
                                     className='border-none outline-none w-[80%] lg:w-[90%] h-[100%] rounded-[8px] p-2'
                                     placeholder='Elanlar Üzrə axtarış'
@@ -1181,10 +1191,10 @@ function Header() {
                                 </button>
                             </div>
                             <Link
-                                className='hidden lg:flex  w-[15%]  items-center justify-center bg-[#079455] text-white rounded-[12px] gap-2'
+                                className='hidden lg:flex  w-[15%]  items-center justify-center bg-[#079455] text-white rounded-[12px] gap-2 '
                                 to=''
                             >
-                                <span>Yeni Elan</span>
+                                <span className=' lg:text-[12px] xl:text-[16px]' >Yeni Elan</span>
                                 <img src={plus} alt="" />
 
                             </Link>
