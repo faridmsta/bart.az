@@ -75,7 +75,7 @@ const bendoGridDown = [
   {
     title: 'Uşaq aləmi',
     image: usaqalemi,
-    customStyle: 'w-[10%]'
+    customStyle: ' w-[10%]'
   },
   {
     title: 'Is Elanlari',
@@ -105,7 +105,7 @@ const bendoGridDown = [
   {
     title: 'Hobbi və asüdə',
     image: hobby,
-    customStyle: 'w-[14%]'
+    customStyle: ' w-[14%]'
   },
 ]
 
@@ -280,43 +280,36 @@ function Home() {
 
   return (
 
-    <main>
-      {/* <section className="bendoGrid w-full">
-        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
-          <div className="innerBendo lg:w-full  " >
-            <div className="upper flex w-full gap-3 mb-3">
-              {
-                bendoGridup.map((item, index) => (
-                  <div key={index} className={`gridElement h-[112px]  p-3  relative  bg-[#F1F3FA] rounded-xl ${item.customStyle}`}>
-                    <p className='text-[15px] font-semibold w-[60%]' >{item.title}</p>
-                    <div className="image absolute bottom-0 right-0   flex items-end justify-end">
-                      <img
-                        className=' object-cover '
-                        src={item.image} alt="" />
-                    </div>
+    <main className=' pb-14  '>
+      <section className="bendoGrid w-full my-6">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle overflow-x-auto lg:overflow-hidden ">
+          <div className="innerBendo flex lg:block lg:w-full gap-3">
+            <div className="upper flex min-w-[100%] gap-3 mb-3 flex-nowrap">
+              {bendoGridup.map((item, index) => (
+                <div key={index} className={`gridElement lg:flex-shrink h-[112px] p-3 relative bg-[#F1F3FA] rounded-xl overflow-hidden ${item.customStyle}`}>
+                  <p className="text-[15px] font-semibold w-[60%]">{item.title}</p>
+                  <div className="image absolute bottom-0 right-0 flex items-end justify-end">
+                    <img className="object-cover" src={item.image} alt="" />
                   </div>
-                ))
-              }
+                </div>
+              ))}
             </div>
-            <div className="upper flex w-full gap-3">
-              {
-                bendoGridDown.map((item, index) => (
-                  <div key={index} className={`gridElement h-[112px]  p-3  relative  bg-[#F1F3FA] rounded-xl ${item.customStyle}`}>
-                    <p className='text-[15px] font-semibold w-[60%]' >{item.title}</p>
-                    <div className="image absolute bottom-0 right-0   flex items-end justify-end">
-                      <img
-                        className=' object-cover '
-                        src={item.image} alt="" />
-                    </div>
+            <div className="upper flex min-w-[100%] gap-3 flex-nowrap  lg:overflow-hidden ">
+              {bendoGridDown.map((item, index) => (
+                <div key={index} className={`gridElement  lg:flex-shrink h-[112px] p-3 relative bg-[#F1F3FA] rounded-xl overflow-hidden ${item.customStyle}`}>
+                  <p className="text-[15px] font-semibold w-[60%]">{item.title}</p>
+                  <div className="image absolute bottom-0 right-0 flex items-end justify-end">
+                    <img className="object-cover" src={item.image} alt="" />
                   </div>
-                ))
-              }
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
+
       <section className="specialAnnounce w-full my-12">
-        <div className="container w-[90%] lg:w-[80%] max-w-[1200px]  m-auto flex justify-between align-middle">
+        <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
           <div className="specialAnnounceInner w-full ">
             <h2 className='font-bold text-[32px] mb-2' >Xüsusi elanlar </h2>
             <StoriesWrap />
@@ -426,7 +419,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="specialOffers my-12  py-12">
+      <section className="specialOffers my-12  py-12 bg-[#F8FAFC]">
         <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
           <div className="specialOffersInnder w-full">
             <div className="header w-full flex justify-between items-end mb-4">
@@ -615,7 +608,7 @@ function Home() {
       </section>
 
 
-      <section className="popularSearch my-12 py-12">
+      <section className="popularSearch my-12 py-12 ">
         <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto">
           <div className="popularSearch w-full">
             <div className="header w-full flex justify-between items-end mb-4">

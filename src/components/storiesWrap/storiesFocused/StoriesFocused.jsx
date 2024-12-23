@@ -30,7 +30,7 @@ function StoriesFocused({ stories, startingStory, setIsFocusStory }) {
                     </button>
                 </div>
                 <Swiper
-                    slidesPerView={2}
+                    slidesPerView={(window.innerWidth>1100)? 2 :(window.innerWidth>1070)? 1.8 : (window.innerWidth>1000)? 1.6 : (window.innerWidth>950)? 1.5 : (window.innerWidth>767)? 1.4  : (window.innerWidth>579)? 1.3 : (window.innerWidth>424)? 1:  1 }
                     centeredSlides={true}
                     spaceBetween={200}
                     pagination={{ type: 'fraction' }}
@@ -105,7 +105,7 @@ const StoryItself = ({ data }) => {
                                         <p  className='text-[#697586] text-[12px]' >{item.location},{item.date.day} {item.date.month} {item.date.year}</p>
                                     </div>
                                 </div>
-                                <Link className='w-full flex  items-center  justify-center p-3 bg-[#EFF4FF] text-[#155EEF] rounded-xl mt-3 ' >
+                                <Link className='w-full flex  items-center  justify-center p-3 bg-[#EFF4FF] text-[#155EEF] rounded-xl mt-3 gap-1' >
                                     Elana keçid <FaArrowRight />
                                 </Link>
                             </div>

@@ -18,7 +18,7 @@ function Stories({stories,setStartingStory,setIsFocusStory}) {
     return (
         <div className='caruselItself' >
             <Swiper
-                slidesPerView={(window.innerWidth>1024)? 8: (window.innerWidth>768)? 6 : (window.innerWidth>600)? 4 : (window.innerWidth>425)? 3 : 2}
+                slidesPerView={(window.innerWidth>1024)? 8: (window.innerWidth>768)? 6 : (window.innerWidth>600)? 4 : (window.innerWidth>426)? 3 : 2.2}
                 spaceBetween={0}
                 freeMode={false}
                 pagination={false}
@@ -42,7 +42,7 @@ function Stories({stories,setStartingStory,setIsFocusStory}) {
                                         className='w-full h-full object-cover rounded-full border-[2px] border-white hover:opacity-50 transition-[15]'
                                         src={item.src} alt="" />
                                 </div>
-                                <p className='w-[70%] align-middle text-[17px]  pt-2 leading-tight absolute top-[70%] md:top-[65%] lg:top-[60%] line-clamp-2'>{item.title}</p>
+                                <p className='w-[70%] align-middle text-[17px]  pt-2 leading-tight absolute top-[65%] md:top-[65%] lg:top-[60%] line-clamp-2'>{item.title}</p>
                             </div>
                         </SwiperSlide>
                         </div>

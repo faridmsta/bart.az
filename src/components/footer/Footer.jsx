@@ -9,7 +9,7 @@ import { FaTiktok } from "react-icons/fa";
 
 function Footer() {
     return (
-        <footer className="footer  py-16 bg-[#F1F3FA]">
+        <footer className="footer  py-16 bg-[#F1F3FA] hidden md:block">
             <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
                 <div className="openStoreInnder w-full">
                     <div className="up flex justify-between items-center">
@@ -42,7 +42,7 @@ function Footer() {
 
                             </div>
                         </div>
-                        <div className="right flex gap-28">
+                        <div className="right flex w-[60%] justify-between ">
                             <div className="flex flex-col gap-2">
                                 <Link
                                     className='text-[#202939] text-[1rem]'
