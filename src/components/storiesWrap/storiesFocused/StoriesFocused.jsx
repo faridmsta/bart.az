@@ -43,9 +43,9 @@ function StoriesFocused({ stories, startingStory, setIsFocusStory }) {
     }, []);
 
     return (
-        <div className="storyfull fixed top-0 left-0 w-[100dvw] h-[100vh] bg-[rgb(0,0,0,0.9)] z-[2]">
+        <div className="storyfull fixed top-0 left-0 w-[100dvw] h-[100dvh] bg-[rgb(0,0,0,0.9)] z-[2]">
             <div className="container w-[80%] max-w-[1128px] m-auto">
-                <div className="py-10 pt-[70px] flex justify-between items-center">
+                <div className="pt-10 pt-[70px] flex justify-between items-center">
                     <div className="logo ">
                         <img src={logo} alt="Logo" />
                     </div>
@@ -93,7 +93,7 @@ const StoryItself = ({ data }) => {
                 {data.stories.map((_, index) => (
                     <div
                         key={index}
-                        className={`h-1 flex-1 rounded-md transition-all ${index <= currentIndex ? 'bg-blue-500' : 'bg-gray-300'
+                        className={`h-1 flex-1 rounded-md transition-all ${index <= currentIndex ? 'bg-gray-500' : 'bg-gray-300'
                             }`}
                     ></div>
                 ))}
@@ -115,7 +115,7 @@ const StoryItself = ({ data }) => {
             >
                 {data.stories.map((item, index) => (
                     <SwiperSlide key={index} className='pt-5'>
-                        <div className="w-full h-[600px] object-cover bg-[#EFF4FF] p rounded-[20px] ">
+                        <div className="w-full  object-cover bg-[#EFF4FF] p rounded-[20px] ">
                             <div className="username p-4 h-[15%] flex items-center gap-3">
                                 <div className="image w-[32px] h-[32px] ">
                                     <img 
@@ -124,7 +124,7 @@ const StoryItself = ({ data }) => {
                                 </div>
                                 <div className="usernameText text-[14px]">{item.user.name}</div>
                             </div>
-                            <div className="elan bg-white rounded-[20px] h-[85%] p-4">
+                            <div className="elan bg-white rounded-[20px] h-[85%] p-4 ">
                                 <div className="info border-[2px] border-[#E3E8EF] rounded-[12px]">
                                     <div className="image overflow-hidden aspect-[4/3] rounded-[12px] ">
                                         <img src={item.image} alt="" />
