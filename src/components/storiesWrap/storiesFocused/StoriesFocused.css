@@ -1,3 +1,5 @@
+
+
 & .storyfull {
 
 
@@ -11,22 +13,37 @@
         margin: 20px auto;
     }
 
-    & .append-buttons {
-        text-align: center;
-        margin-top: 20px;
+    & .swiper-pagination {
+        display: none;
     }
 
-    &>.append-buttons button {
-        display: inline-block;
-        cursor: pointer;
-        border: 1px solid #007aff;
-        color: #007aff;
-        text-decoration: none;
-        padding: 4px 10px;
-        border-radius: 4px;
-        margin: 0 10px;
-        font-size: 13px;
+    & .swiper-button-prev::after {
+        display: none;
+
+        padding: 25px 35px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        scale: 0.5;
+        color: black;
+
+      
+
     }
+
+    & .swiper-button-next::after {
+        display: none;
+
+        padding: 25px 35px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+ 
+        scale: 0.5;
+        color: black;
+
+        
+    }
+
+
 
 
 
@@ -65,20 +82,27 @@
     }
 
     & .swiper-button-prev::after {
+        display: flex;
         padding: 25px 35px;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.3);
         scale: 0.5;
         color: black;
     }
-
+    
     & .swiper-button-next::after {
+        display: flex;
         padding: 25px 35px;
         border-radius: 50%;
-        background-color:  rgba(255, 255, 255, 0.3);;
+        background-color: rgba(255, 255, 255, 0.3);
+        ;
 
         scale: 0.5;
         color: black;
+    }
+
+    & .swiper-pagination {
+        display: none;
     }
 
 
