@@ -93,7 +93,7 @@ const StoryItself = ({ data }) => {
                 {data.stories.map((_, index) => (
                     <div
                         key={index}
-                        className={`h-1 flex-1 rounded-md transition-all ${index <= currentIndex ? 'bg-gray-500' : 'bg-gray-300'
+                        className={`h-1 flex-1 rounded-md transition-all ${index <= currentIndex ? 'bg-gray-300' : 'bg-gray-500'
                             }`}
                     ></div>
                 ))}
