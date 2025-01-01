@@ -335,7 +335,7 @@ function Home() {
                   ${(index == 0) ? "border-[#F79009]" : (index == 1) ? "border-[#17B26A]" : (index == 2) ? "border-[#F04438]" : (index == 3) ? "border-[#2970FF]" : "border-[#E3E8EF]"
                     }
                   
-                  border-[2px] w-[49%] sm:w-[30%]  lg:w-[24%] h-[340px] bg rounded-[20px] overflow-hidden `}>
+                  border-[2px] w-[49%] sm:w-[30%]  lg:w-[24%]  bg rounded-[20px] overflow-hidden `}>
                     <div className="top w-full">
                       <div className="image w-full p-[2px] rounded-[16px] overflow-hidden">
                         <img
