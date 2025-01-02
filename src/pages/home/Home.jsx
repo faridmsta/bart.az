@@ -390,7 +390,7 @@ function Home() {
                   border-[#E3E8EF]
                   
                   
-                  border-[2px] w-[49%] sm:w-[30%]  lg:w-[24%] h-[340px] bg rounded-[20px] overflow-hidden `}>
+                  border-[2px] w-[49%] sm:w-[30%]  lg:w-[24%] bg rounded-[20px] overflow-hidden `}>
                     <div className="top w-full">
                       <div className="image w-full p-[2px] rounded-[16px] overflow-hidden">
                         <img
@@ -436,7 +436,7 @@ function Home() {
                 products.map((item, index) => (
                   <div key={item.id} className={`card border-[#E3E8EF]
                  
-                  border-[2px] w-[49%] sm:w-[30%]  lg:w-[24%] h-[340px] bg rounded-[20px] overflow-hidden `}>
+                  border-[2px] w-[49%] sm:w-[30%]  lg:w-[24%] bg rounded-[20px] overflow-hidden `}>
                     <div className="top w-full">
                       <div className="image w-full p-[2px] rounded-[16px] overflow-hidden">
                         <img
