@@ -9,7 +9,7 @@ import { FaTiktok } from "react-icons/fa";
 
 function Footer() {
     return (
-        <footer className="footer  py-16 bg-[#F1F3FA] hidden md:block">
+        <footer className="footer  py-16 bg-[#F1F3FA] hidden md:block font-jakarta">
             <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
                 <div className="openStoreInnder w-full">
                     <div className="up flex justify-between items-center">
@@ -93,8 +93,8 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="down flex items-center justify-between py-6 border-t-2 border-[#dcdfe7] mt-6">
-                        <p className="w-1/3 text-[12px]">
+                    <div className="down flex items-center justify-between py-6 border-t-2 border-[#dcdfe7] mt-6 text-[#697586]" >
+                        <p className="w-1/3 text-[12px] ">
                         Saytda yerləşdirilmiş bannerlər və elanların məzmununa görə saytın rəhbərliyi məsuliyyət daşımır! Copyright 2015-2024 Bart.az.
                         </p>
                         <p className="flex flex-col text-[12px] items-end">

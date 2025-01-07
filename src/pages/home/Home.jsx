@@ -75,7 +75,7 @@ const bendoGridDown = [
   {
     title: 'Uşaq aləmi',
     image: usaqalemi,
-    customStyle: ' w-[10%]'
+    customStyle: ' w-[13%]'
   },
   {
     title: 'Is Elanlari',
@@ -280,14 +280,14 @@ function Home() {
 
   return (
 
-    <main className=' pb-14  '>
+    <main className=' pb-14  font-jakarta'>
       <section className="bendoGrid w-full my-6">
         <div className="container w-[90%] lg:w-[80%] max-w-[1128px] m-auto flex justify-between align-middle overflow-x-auto custom-scrollbar  lg:overflow-hidden ">
           <div className="innerBendo flex lg:block lg:w-full gap-3">
             <div className="upper flex min-w-[100%] gap-3 mb-3 flex-nowrap">
               {bendoGridup.map((item, index) => (
                 <div key={index} className={`gridElement lg:flex-shrink h-[112px] p-3 relative bg-[#F1F3FA] rounded-xl overflow-hidden ${item.customStyle}`}>
-                  <p className="text-[15px] font-semibold w-[60%]">{item.title}</p>
+                  <p className="text-[15px] font-semibold w-[80%] ">{item.title}</p>
                   <div className="image absolute bottom-0 right-0 flex items-end justify-end">
                     <img className="object-cover" src={item.image} alt={item.title} />
                   </div>
@@ -297,7 +297,7 @@ function Home() {
             <div className="upper flex min-w-[100%] gap-3 flex-nowrap  lg:overflow-hidden ">
               {bendoGridDown.map((item, index) => (
                 <div key={index} className={`gridElement  lg:flex-shrink h-[112px] p-3 relative bg-[#F1F3FA] rounded-xl overflow-hidden ${item.customStyle}`}>
-                  <p className="text-[15px] font-semibold w-[60%]">{item.title}</p>
+                  <p className="text-[15px] font-semibold w-[80%]">{item.title}</p>
                   <div className="image absolute bottom-0 right-0 flex items-end justify-end">
                     <img className="object-cover" src={item.image} alt={item.title} />
                   </div>
@@ -344,7 +344,7 @@ function Home() {
                       </div>
 
                     </div>
-                    <div className="bottom p-2">
+                    <div className="bottom p-4 ">
                       <div className="info py-2 flex items-center justify-between">
                         <span className="price font-extrabold text-[20px] ">
                           {item.price} AZN
@@ -359,7 +359,7 @@ function Home() {
                         </span>
                       </div>
                       <p className='longTextDeny py-1' >{item.description}</p>
-                      <span className='text-[#697586]' >{item.location},{item.date.day}{item.date.month} {item.date.year}</span>
+                      <span className='text-[#697586] ' >{item.location},{item.date.day}{item.date.month} {item.date.year}</span>
                     </div>
                   </div>
                 ))
@@ -399,7 +399,7 @@ function Home() {
                       </div>
 
                     </div>
-                    <div className="bottom p-2">
+                    <div className="bottom p-4 ">
                       <div className="info py-2 flex items-center justify-between">
                         <span className="price font-extrabold text-[20px] ">
                           {item.price} AZN
@@ -407,7 +407,7 @@ function Home() {
 
                       </div>
                       <p className='longTextDeny py-1' >{item.description}</p>
-                      <span className='text-[#697586]' >{item.location},{item.date.day}{item.date.month} {item.date.year}</span>
+                      <span className='text-[#697586] pb-3' >{item.location},{item.date.day}{item.date.month} {item.date.year}</span>
                     </div>
                   </div>
                 ))
@@ -445,7 +445,7 @@ function Home() {
                       </div>
 
                     </div>
-                    <div className="bottom p-2">
+                    <div className="bottom p-4 ">
                       <div className="info py-2 flex items-center justify-between">
                         <span className="price font-extrabold text-[20px] ">
                           {item.price} AZN
@@ -460,7 +460,7 @@ function Home() {
                         </span>
                       </div>
                       <p className='longTextDeny py-1' >{item.description}</p>
-                      <span className='text-[#697586]' >{item.location},{item.date.day}{item.date.month} {item.date.year}</span>
+                      <span className='text-[#697586] pb-3' >{item.location},{item.date.day}{item.date.month} {item.date.year}</span>
                     </div>
                   </div>
                 ))

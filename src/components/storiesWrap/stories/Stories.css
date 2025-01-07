@@ -42,7 +42,7 @@
     }
 
     .swiper-button-disabled {
-        opacity: 0;
+        opacity: 0!important;
         height: 0px;
         width: 0px;
     }

@@ -20,6 +20,8 @@ import seyahetler from './components/img/image 1-10.png'
 import gozelliksaqlamliq from './components/img/image 1-11.png'
 import hobby from './components/img/image 1-12.png'
 
+import storeLine from './../img/icons/storeLine.svg'
+import userLine from './../img/icons/userLine.svg'
 
 const catalog1 = [
     {
@@ -1026,7 +1028,7 @@ function Header() {
 
 
     return (
-        <header className='w-full' >
+        <header className='w-full font-jakarta' >
             <div className="header">
                 <div className="top bg-[#F1F3FA] h-[56px] lg:flex items-center hidden ">
                     <div className="container w-[80%] max-w-[1128px] m-auto flex justify-between align-middle">
@@ -1043,8 +1045,8 @@ function Header() {
                         <div className="right">
                             <nav>
                                 <ul className='flex gap-[20px] text-[15px] justify-between align-middle ' >
-                                    <li className='flex items-center' ><Link to='' >Mağaza aç</Link></li>
-                                    <li className='flex items-center' ><Link to='' >Giriş və qeydiyyat</Link></li>
+                                    <li className='flex items-center' ><Link to='' className='flex gap-[6px]' ><img src={storeLine} alt="Store icon" /> Mağaza aç</Link></li>
+                                    <li className='flex items-center' ><Link to='' className='flex gap-[6px]' ><img src={userLine} alt="user Icon" /> Giriş və qeydiyyat</Link></li>
                                     <li className='flex items-center' >
 
                                         <select name="" id="" className='p-1 bg-[#E3E8EF] rounded-[6px]' >
@@ -1179,9 +1181,9 @@ function Header() {
                                     </nav>
                                 </div>
                             </div>
-                            <div className="search bg-[#2970FF] w-full lg:w-[68%] p-1  rounded-[12px] text-[16px] lg:text-[12px] xl:text-[16px] ">
+                            <div className="search bg-[#2970FF] w-full lg:w-[68%] rounded-[12px] text-[16px] lg:text-[12px] xl:text-[16px] ">
                                 <input
-                                    className='border-none outline-none w-[80%] lg:w-[90%] h-[100%] rounded-[8px] p-2'
+                                    className='outline-none w-[80%] lg:w-[90%] h-[100%] rounded-[10px] py-[12px]  pl-[16px] border-[2px] border-[#2970FF] text-[15px] font-medium leading-[22px] tracking-[-0.03em] underline decoration-solid decoration-transparent'
                                     placeholder='Elanlar Üzrə axtarış'
                                     type="text"
 
