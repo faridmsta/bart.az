@@ -26,8 +26,8 @@
     .swiper-button-prev {
         transition: .3s;
         position: absolute;
-        height: 60px;
-        width: 60px;
+        height:40px;
+        width:40px;
         background: #F1F3FA;
         top: 45%;
         transform: translateY(-50%);
@@ -50,8 +50,8 @@
     .swiper-button-next {
         transition: .3s;
         position: absolute;
-        height: 60px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
         background: #F1F3FA;
         top: 45%;
         transform: translateY(-50%);
@@ -67,12 +67,12 @@
     }
     .swiper-button-prev::after {
       
-        scale: 0.5;
+        scale: 0.2;
         color: black;
     }
     .swiper-button-next::after {
       
-        scale: 0.5;
+        scale: 0.2;
         color: black;
     }
 }

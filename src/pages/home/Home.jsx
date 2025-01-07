@@ -274,8 +274,13 @@ const products = [
 
 
 function Home() {
-
-
+  
+  
+  function addSpaces(input) {
+    // Hər 3 simvoldan sonra boşluq əlavə et
+    let result = input.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    return result;
+  }
 
 
   return (
@@ -347,7 +352,7 @@ function Home() {
                     <div className="bottom p-4 ">
                       <div className="info py-2 flex items-center justify-between">
                         <span className="price font-extrabold text-[20px] ">
-                          {item.price} AZN
+                          {addSpaces(`${item.price}`)} AZN
                         </span>
                         <span className='flex gap-1' >
                           {item.isBarter && <div className=''>
@@ -402,7 +407,7 @@ function Home() {
                     <div className="bottom p-4 ">
                       <div className="info py-2 flex items-center justify-between">
                         <span className="price font-extrabold text-[20px] ">
-                          {item.price} AZN
+                          {addSpaces(`${item.price}`)} AZN
                         </span>
 
                       </div>
@@ -448,7 +453,7 @@ function Home() {
                     <div className="bottom p-4 ">
                       <div className="info py-2 flex items-center justify-between">
                         <span className="price font-extrabold text-[20px] ">
-                          {item.price} AZN
+                          {addSpaces(`${item.price}`)} AZN
                         </span>
                         <span className='flex gap-1' >
                           {item.isBarter && <div className=''>

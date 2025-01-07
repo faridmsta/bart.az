@@ -32,3 +32,8 @@
   background-color: var(--light);
   /* Arxa fon rəngi */
 }
+
+.storybyGradient{
+  background: rgb(223,0,173);
+background: linear-gradient(230deg, rgba(223,0,173,1) 0%, rgba(224,2,169,1) 30%, rgba(255,156,0,1) 70%, rgba(255,165,0,1) 100%);
+}
