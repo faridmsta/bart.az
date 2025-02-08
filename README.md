@@ -13,7 +13,6 @@ This project uses the following technologies:
 - **React.js** — for the user interface
 - **Vite** — for a fast frontend development environment
 - **Tailwind CSS** — for styling
-- **Firebase (if used)** — for authentication or database
 
 ## 📂 Folder Structure
 ```
