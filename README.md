@@ -1,3 +1,3 @@
 # Bart.az Startup
 
-visit - [](https://bart-ten.vercel.app/)
+visit - [bart.az](https://bart-ten.vercel.app/)
